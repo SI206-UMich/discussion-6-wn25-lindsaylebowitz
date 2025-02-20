@@ -24,7 +24,7 @@ def load_csv(f):
     with open(full_path, newline='') as csvfile:
         reader = csv.reader(csvfile)
         headers = next(reader) 
-        years = headers[1:]
+        years = headers[1:] 
 
         for year in years:
             data[year] = {}
@@ -35,7 +35,6 @@ def load_csv(f):
                 data[year][month] = row[i + 1]  
 
     return data
-
 
 def get_annual_max(d):
     '''
